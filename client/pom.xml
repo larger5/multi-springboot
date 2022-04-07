@@ -3,20 +3,30 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
     <parent>
-        <groupId>org.springframework.boot</groupId>
-        <artifactId>spring-boot-starter-parent</artifactId>
-        <version>2.6.6</version>
-        <relativePath/> <!-- lookup parent from repository -->
+        <groupId>org.example</groupId>
+        <artifactId>multi-springboot</artifactId>
+        <version>1.0-SNAPSHOT</version>
     </parent>
-    <groupId>com.example</groupId>
+
     <artifactId>client</artifactId>
     <version>0.0.1-SNAPSHOT</version>
+
+    <packaging>war</packaging>
+
     <name>client</name>
     <description>client</description>
     <properties>
         <java.version>1.8</java.version>
     </properties>
     <dependencies>
+        <!-- 子工程-公共服务-->
+        <dependency>
+            <groupId>com.example</groupId>
+            <artifactId>service</artifactId>
+            <version>0.0.1-SNAPSHOT</version>
+            <scope>compile</scope>
+        </dependency>
+
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
@@ -28,7 +38,6 @@
             <scope>test</scope>
         </dependency>
     </dependencies>
-
     <build>
         <plugins>
             <plugin>
@@ -37,5 +46,4 @@
             </plugin>
         </plugins>
     </build>
-
 </project>
