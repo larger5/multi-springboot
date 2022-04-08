@@ -22,7 +22,7 @@
     <dependencies>
         <!-- 子工程-公共服务-->
         <dependency>
-            <groupId>com.example</groupId>
+            <groupId>org.example</groupId>
             <artifactId>service</artifactId>
             <version>0.0.1-SNAPSHOT</version>
             <scope>compile</scope>
